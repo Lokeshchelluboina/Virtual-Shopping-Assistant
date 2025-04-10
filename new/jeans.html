@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 10 Jeans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            animation: gradientBackground 10s ease infinite;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: gold;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .logout-btn {
+            background-color: gold;
+            color: black;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .content h2 {
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .product {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 100%;
+            max-width: 250px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .product img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            margin: 10px 0 5px;
+        }
+
+        .product p {
+            margin: 0;
+            color: #333;
+        }
+
+        footer {
+            background-color: black;
+            color: gold;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .social-icons i {
+            margin: 0 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function logout() {
+            window.location.href = "index.html";
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>🛍️ Virtual Shopping Assistant</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+
+    <div class="content">
+        <h2>Top-10 Suggestions of Jeans</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="assets/20.jpeg" alt="Jeans 1">
+                <h3>Blue Slim Fit Jeans</h3>
+                <p>Rs. 1499</p>
+            </div>
+            <div class="product">
+                <img src="assets/19.jpeg" alt="Jeans 2">
+                <h3>Black Stretchable Jeans</h3>
+                <p>Rs. 1299</p>
+            </div>
+            <div class="product">
+                <img src="assets/18.jpeg" alt="Jeans 3">
+                <h3>Distressed Denim Jeans</h3>
+                <p>Rs. 1799</p>
+            </div>
+            <div class="product">
+                <img src="assets/17.jpeg" alt="Jeans 4">
+                <h3>Grey Tapered Jeans</h3>
+                <p>Rs. 1599</p>
+            </div>
+            <div class="product">
+                <img src="assets/16.jpeg" alt="Jeans 5">
+                <h3>Classic Fit Blue Jeans</h3>
+                <p>Rs. 1399</p>
+            </div>
+            <div class="product">
+                <img src="assets/15.jpeg" alt="Jeans 6">
+                <h3>Stone Wash Slim Jeans</h3>
+                <p>Rs. 1199</p>
+            </div>
+            <div class="product">
+                <img src="assets/14.jpeg" alt="Jeans 7">
+                <h3>Ripped Ankle Fit Jeans</h3>
+                <p>Rs. 1899</p>
+            </div>
+            <div class="product">
+                <img src="assets/13.jpeg" alt="Jeans 8">
+                <h3>Dark Navy Skinny Jeans</h3>
+                <p>Rs. 1599</p>
+            </div>
+            <div class="product">
+                <img src="assets/12.jpg" alt="Jeans 9">
+                <h3>United Denim Light Jeans</h3>
+                <p>Rs. 1699</p>
+            </div>
+            <div class="product">
+                <img src="assets/11.jpeg" alt="Jeans 10">
+                <h3>ONLY Blue Skinny Jeans</h3>
+                <p>Rs. 1399</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h3>Contact Details</h3>
+        <div class="social-icons">
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-x-twitter"></i>
+        </div>
+    </footer>
+</body>
+</html>

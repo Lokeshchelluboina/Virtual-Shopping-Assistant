@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(270deg, #f3ec78, #af4261, #00c9ff, #92fe9d);
+            background-size: 800% 800%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header, footer {
+            background-color: black;
+            color: gold;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .logout-button {
+            background-color: gold;
+            color: black;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .product img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .product h3 {
+            margin: 10px 0 5px 0;
+            font-size: 18px;
+        }
+
+        .product p {
+            margin: 0;
+            color: #555;
+        }
+
+        footer {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-icons i {
+            font-size: 24px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function logout() {
+            window.location.href = "index.html";
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>🛍️ Virtual Shopping Assistant</h1>
+        <button class="logout-button" onclick="logout()">Logout</button>
+    </header>
+
+    <main>
+        <h2>Top-10 Suggestions of T-Shirts</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="assets/11.jpg" alt="T-Shirt 1">
+                <h3>Designer White Tee</h3>
+                <p>Price: ₹2,499</p>
+            </div>
+            <div class="product">
+                <img src="assets/13.jpeg" alt="T-Shirt 2">
+                <h3>Graphic Print Tee</h3>
+                <p>Price: ₹1,299</p>
+            </div>
+            <div class="product">
+                <img src="assets/12.jpg" alt="T-Shirt 3">
+                <h3>Black Minimal Tee</h3>
+                <p>Price: ₹999</p>
+            </div>
+            <div class="product">
+                <img src="assets/14.jpeg" alt="T-Shirt 4">
+                <h3>Casual Blue Tee</h3>
+                <p>Price: ₹899</p>
+            </div>
+            <div class="product">
+                <img src="assets/15.jpeg" alt="T-Shirt 5">
+                <h3>Printed Navy Tee</h3>
+                <p>Price: ₹1,199</p>
+            </div>
+            <div class="product">
+                <img src="assets/16.jpeg" alt="T-Shirt 6">
+                <h3>Street Style Black</h3>
+                <p>Price: ₹1,699</p>
+            </div>
+            <div class="product">
+                <img src="assets/17.jpeg" alt="T-Shirt 7">
+                <h3>Light Blue Classic</h3>
+                <p>Price: ₹1,099</p>
+            </div>
+            <div class="product">
+                <img src="assets/18.jpeg" alt="T-Shirt 8">
+                <h3>Trendy Striped Tee</h3>
+                <p>Price: ₹1,499</p>
+            </div>
+            <div class="product">
+                <img src="assets/19.jpeg" alt="T-Shirt 9">
+                <h3>Premium Fit Black</h3>
+                <p>Price: ₹1,899</p>
+            </div>
+            <div class="product">
+                <img src="assets/20.jpeg" alt="T-Shirt 10">
+                <h3>Comfort Crew Neck</h3>
+                <p>Price: ₹999</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Contact Details</h3>
+        <div class="social-icons">
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-x-twitter"></i>
+        </div>
+    </footer>
+</body>
+</html>

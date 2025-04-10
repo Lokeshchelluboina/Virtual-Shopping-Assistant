@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Virtual Shopping Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #ffffff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    header h2 { color: #333; }
+    .logout-btn {
+      padding: 8px 16px;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .logout-btn:hover { background-color: #c82333; }
+    .content {
+      flex: 1;
+      padding: 30px;
+      text-align: center;
+    }
+    .search-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .search-bar {
+      width: 80%;
+      max-width: 400px;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .search-btn {
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .search-btn i {
+      margin-left: 5px;
+    }
+    .search-btn:hover { background-color: #0056b3; }
+    datalist {
+      font-size: 16px;
+    }
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .category-btn {
+      padding: 12px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      min-width: 100px;
+    }
+    .category-btn:hover { background-color: #0056b3; }
+    .voice-control { margin-top: 20px; }
+    footer {
+      background-color: black;
+      color: gold;
+      padding: 20px;
+      text-align: center;
+    }
+    footer h3 { margin-bottom: 10px; }
+    .social-icons i {
+      font-size: 20px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h2>🛍️ Virtual Shopping Assistant</h2>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </header>
+  <div class="content">
+    <div class="search-wrapper">
+      <input type="text" id="searchInput" list="products" placeholder="Search for a product..." class="search-bar" />
+      <datalist id="products">
+        <option value="Shirt">
+        <option value="T-Shirt">
+        <option value="Hoodie">
+        <option value="Denim Jacket">
+        <option value="Jeans">
+        <option value="Kurta">
+        <option value="Jacket">
+        <option value="Sweater">
+        <option value="Blazer">
+        <option value="Shoes">
+      </datalist>
+      <button class="search-btn" onclick="searchProduct()">Search <i class="fas fa-search"></i></button>
+    </div>
+    <div class="categories">
+      <button class="category-btn" onclick="goToPage('shirt')" id="shirt">Shirt</button>
+      <button class="category-btn" onclick="goToPage('tshirt')" id="tshirt">T-Shirt</button>
+      <button class="category-btn" onclick="goToPage('hoodie')" id="hoodie">Hoodie</button>
+      <button class="category-btn" onclick="goToPage('denim')" id="denim">Denim Jacket</button>
+      <button class="category-btn" onclick="goToPage('jeans')" id="jeans">Jeans</button>
+      <button class="category-btn" onclick="goToPage('kurta')" id="kurta">Kurta</button>
+      <button class="category-btn" onclick="goToPage('jacket')" id="jacket">Jacket</button>
+      <button class="category-btn" onclick="goToPage('sweater')" id="sweater">Sweater</button>
+      <button class="category-btn" onclick="goToPage('blazer')" id="blazer">Blazer</button>
+      <button class="category-btn" onclick="goToPage('shoes')" id="shoes">Shoes</button>
+    </div>
+    <div class="voice-control">
+      <button class="category-btn" onclick="startListening()">🎧 Speak Product Name</button>
+    </div>
+  </div>
+  <footer>
+    <h3>Contact Details</h3>
+    <div class="social-icons">
+      <i class="fab fa-whatsapp"></i>
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-x-twitter"></i>
+    </div>
+  </footer>
+
+  <script>
+    function logout() {
+      window.location.href = "index.html";
+    }
+
+    function goToPage(product) {
+      window.location.href = product + ".html";
+    }
+
+    function searchProduct() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const productMap = {
+        "shirt": "shirt",
+        "t shirt": "tshirt",
+        "t-shirt": "tshirt",
+        "tshirt": "tshirt",
+        "hoodie": "hoodie",
+        "denim jacket": "denim",
+        "denim": "denim",
+        "jeans": "jeans",
+        "kurta": "kurta",
+        "jacket": "jacket",
+        "sweater": "sweater",
+        "blazer": "blazer",
+        "shoes": "shoes"
+      };
+      for (const key in productMap) {
+        if (query.includes(key)) {
+          goToPage(productMap[key]);
+          return;
+        }
+      }
+      alert("Product not recognized. Try again.");
+    }
+
+    function startListening() {
+      if (!('webkitSpeechRecognition' in window)) {
+        alert("Voice recognition not supported.");
+        return;
+      }
+      const recognition = new webkitSpeechRecognition();
+      recognition.lang = 'en-US';
+      recognition.start();
+      recognition.onresult = function(event) {
+        const transcript = event.results[0][0].transcript.toLowerCase();
+        const productMap = {
+          "shirt": "shirt",
+          "t shirt": "tshirt",
+          "t-shirt": "tshirt",
+          "hoodie": "hoodie",
+          "denim jacket": "denim",
+          "jeans": "jeans",
+          "kurta": "kurta",
+          "jacket": "jacket",
+          "sweater": "sweater",
+          "blazer": "blazer",
+          "shoes": "shoes"
+        };
+        for (const key in productMap) {
+          if (transcript.includes(key)) {
+            goToPage(productMap[key]);
+            return;
+          }
+        }
+        alert("Product not recognized. Try again.");
+      };
+    }
+  </script>
+</body>
+</html>

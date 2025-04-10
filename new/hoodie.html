@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top-10 Hoodies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        function logout() {
+            window.location.href = "index.html";
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            animation: gradientBG 10s ease infinite;
+            background: linear-gradient(-45deg, #ff6ec4, #7873f5, #4ADEDE, #E3FDFD);
+            background-size: 400% 400%;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        header, footer {
+            background-color: black;
+            color: gold;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .logout-btn {
+            background: gold;
+            color: black;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+        }
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        footer {
+            flex-direction: column;
+            align-items: center;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons i {
+            font-size: 24px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">🛍️ Virtual Shopping Assistant</div>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+
+    <main>
+        <h1>Top-10 Suggestions of Hoodies</h1>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="assets/20.jpeg" alt="Hoodie 1" />
+                <h3>Cozy Grey Hoodie</h3>
+                <p>$39.99</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/19.jpeg" alt="Hoodie 2" />
+                <h3>Street Style Black Hoodie</h3>
+                <p>$42.00</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/18.jpeg" alt="Hoodie 3" />
+                <h3>Classic White Zip Hoodie</h3>
+                <p>$37.50</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/17.jpeg" alt="Hoodie 4" />
+                <h3>Navy Blue Comfort Hoodie</h3>
+                <p>$45.99</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/16.jpeg" alt="Hoodie 5" />
+                <h3>Minimalist Beige Hoodie</h3>
+                <p>$41.25</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/15" alt="Hoodie 6" />
+                <h3>Urban Red Hoodie</h3>
+                <p>$49.90</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/14.jpeg" alt="Hoodie 7" />
+                <h3>Oversized Dark Hoodie</h3>
+                <p>$35.00</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/13.jpeg" alt="Hoodie 8" />
+                <h3>Sporty Gray Hoodie</h3>
+                <p>$38.99</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/12.jpg" alt="Hoodie 9" />
+                <h3>Printed Black Hoodie</h3>
+                <p>$43.75</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/11.jpeg" alt="Hoodie 10" />
+                <h3>Modern Cut Hoodie</h3>
+                <p>$40.00</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h2>Contact Details</h2>
+        <div class="social-icons">
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-x-twitter"></i>
+        </div>
+    </footer>
+</body>
+</html>

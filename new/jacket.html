@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kurta Suggestions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(270deg, #fbd786, #f7797d, #c6ffdd, #fbd786);
+      background-size: 800% 800%;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header, footer {
+      padding: 20px;
+      color: gold;
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    header button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: gold;
+      color: black;
+      cursor: pointer;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 10px;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .product-card h3, .product-card p {
+      margin: 10px 0;
+    }
+
+    footer .social-icons img {
+      width: 30px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🛍️ Virtual Shopping Assistant</h1>
+    <button onclick="window.location.href='index.html'">Logout</button>
+  </header>
+
+  <main>
+    <h2>Top-10 Suggestions of Kurta</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="assets/1.jpeg" alt="Kurta 1">
+        <h3>Solid Cotton Kurta</h3>
+        <p>Price: ₹899</p>
+      </div>
+      <div class="product-card">
+        <img src="assets/2.avif" alt="Kurta 2">
+        <h3>Floral Printed Kurta</h3>
+        <p>Price: ₹1,049</p>
+      </div>
+      <div class="product-card">
+        <img src="assets/3.jpg" alt="Kurta 3">
+        <h3>Festive Wear Kurta</h3>
+        <p>Price: ₹1,299</p>
+      </div>
+      <div class="product-card">
+        <img src="assets/4.avif" alt="Kurta 4">
+        <h3>Plain Straight Kurta</h3>
+        <p>Price: ₹849</p>
+      </div>
+      <div class="product-card">
+        <img src="assets/5.avif" alt="Kurta 5">
+        <h3>Pathani Style Kurta</h3>
+        <p>Price: ₹1,199</p>
+      </div>
+      <div class="product-card">
+        <img src="assets/6.jpeg" alt="Kurta 6">
+        <h3>Designer Kurta Set</h3>
+        <p>Price: ₹1,699</p>
+      </div>
+      <div class="product-card">
+        <img src="assets/7.jpeg" alt="Kurta 7">
+        <h3>Casual Short Kurta</h3>
+        <p>Price: ₹749</p>
+      </div>
+      <div class="product-card">
+        <img src="assets/8.jpeg" alt="Kurta 8">
+        <h3>Embroidered Ethnic Kurta</h3>
+        <p>Price: ₹1,399</p>
+      </div>
+      <div class="product-card">
+        <img src="assets/9.avif" alt="Kurta 9">
+        <h3>Linen Blend Kurta</h3>
+        <p>Price: ₹999</p>
+      </div>
+      <div class="product-card">
+        <img src="assets/10.jpeg" alt="Kurta 10">
+        <h3>Mandarin Collar Kurta</h3>
+        <p>Price: ₹1,149</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>Contact Details</div>
+    <div class="social-icons">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+      <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook">
+      <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx.png" alt="X">
+    </div>
+  </footer>
+</body>
+</html>

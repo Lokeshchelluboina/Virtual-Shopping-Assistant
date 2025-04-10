@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweater Suggestions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(270deg, #c2e9fb, #a1c4fd, #d4fc79, #96e6a1, #fddb92);
+            background-size: 1000% 1000%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header, footer {
+            padding: 20px;
+            color: gold;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        header button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: gold;
+            color: black;
+            cursor: pointer;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 10px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-card h3, .product-card p {
+            margin: 10px 0;
+        }
+
+        footer .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🛙️ Virtual Shopping Assistant</h1>
+        <button onclick="window.location.href='index.html'">Logout</button>
+    </header>
+
+    <main>
+        <h2>Top-10 Suggestions of Sweaters</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="assets/31.avif" alt="Sweater 1">
+                <h3>Classic Grey Sweater</h3>
+                <p>Price: ₹1,299</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/32.avif" alt="Sweater 2">
+                <h3>Winter White Knit</h3>
+                <p>Price: ₹1,499</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/35.avif" alt="Sweater 3">
+                <h3>Maroon Wool Pullover</h3>
+                <p>Price: ₹1,799</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/15.jpeg" alt="Sweater 4">
+                <h3>Beige Cozy Sweater</h3>
+                <p>Price: ₹1,399</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/12.jpg" alt="Sweater 5">
+                <h3>Striped Casual Wear</h3>
+                <p>Price: ₹1,649</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/20.jpeg" alt="Sweater 6">
+                <h3>Black Turtle Neck</h3>
+                <p>Price: ₹1,999</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/11.jpg" alt="Sweater 7">
+                <h3>Mint Green Sweater</h3>
+                <p>Price: ₹1,459</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/10.jpeg" alt="Sweater 8">
+                <h3>Brown Wool Blend</h3>
+                <p>Price: ₹1,849</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/5.avif" alt="Sweater 9">
+                <h3>Peach Soft Sweater</h3>
+                <p>Price: ₹1,599</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/5.avif" alt="Sweater 10">
+                <h3>Blue Comfy Hoodie</h3>
+                <p>Price: ₹1,749</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>Contact Details</div>
+        <div class="social-icons">
+            <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+            <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook">
+            <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/twitterx.png" alt="X">
+        </div>
+    </footer>
+</body>
+</html>

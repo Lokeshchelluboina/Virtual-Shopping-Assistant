@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+        .input-field {
+            width: 90%;
+            padding: 10px;
+            margin: 10px auto;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+        .btn.back {
+            background-color: #007bff;
+        }
+        .btn.back:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🛍️ Sign Up</h1>
+        
+        <div id="signup-form" class="card">
+            <h2>Create an Account</h2>
+            <input type="text" id="new-username" placeholder="Username" class="input-field">
+            <input type="password" id="new-password" placeholder="Password" class="input-field">
+            <input type="email" id="email" placeholder="Email" class="input-field">
+            <button onclick="registerUser()" class="btn">Sign Up</button>
+            <button onclick="goToLogin()" class="btn back">Back to Login</button>
+        </div>
+    </div>
+    
+    <script>
+        function registerUser() {
+            let username = document.getElementById("new-username").value;
+            let password = document.getElementById("new-password").value;
+            let email = document.getElementById("email").value;
+            
+            if (username && password && email) {
+                alert("Signup successful! You can now log in.");
+                window.location.href = "index.html"; // Redirect to login page
+            } else {
+                alert("Please fill in all fields.");
+            }
+        }
+        
+        function goToLogin() {
+            window.location.href = "index.html"; // Redirect to login page
+        }
+    </script>
+</body>
+</html>
